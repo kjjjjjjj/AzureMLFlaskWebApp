@@ -8,7 +8,8 @@
 
 #import necessary libraries for deployment
 from flask import Flask, request, jsonify, render_template
-import joblib
+from sklearn.externals import joblib
+# import joblib
 from pyforest import *
 
 #naming our app as app

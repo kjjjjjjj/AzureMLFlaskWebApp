@@ -10,7 +10,8 @@
 from pyforest import *
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
-import joblib
+from sklearn.externals import joblib
+# import joblib
 from sklearn.datasets import load_iris
 
 #load dataset into a pandas dataframe
