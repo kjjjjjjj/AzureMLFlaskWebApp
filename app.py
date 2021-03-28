@@ -8,12 +8,13 @@
 
 #import necessary libraries for deployment
 from flask import Flask, request, jsonify, render_template
-from sklearn.externals import joblib
-# import joblib
+import sys
+import joblib
+sys.modules['sklearn.externals.joblib'] = joblib
 from pyforest import *
 
 #naming our app as app
-app= Flask(__name__)
+app=Flask(__name__)
 #load pickle file for creating web app
 model= joblib.load(open("model.pkl", "rb"))
 
